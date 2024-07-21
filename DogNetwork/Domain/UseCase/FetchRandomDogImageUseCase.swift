@@ -20,6 +20,23 @@ public class FetchRandomDogImageUseCase: FetchRandomDogImageUseCaseProtocol {
     }
     
     public func execute() -> AnyPublisher<Dog, Error> {
-        repository.fetchRandomDogImage()
+        Logger.shared.log(message: "Executing fetch random dog image use case", level: .debug)
+        return repository.fetchRandomDogImage()
+            .handleEvents(receiveSubscription: { _ in
+                Logger.shared.log(message: "Started fetch random dog image use case", level: .info)
+            }, receiveOutput: { dog in
+                Logger.shared.log(message: "Received dog in use case: \(dog)", level: .debug)
+            }, receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    Logger.shared.log(message: "Finished fetch random dog image use case", level: .info)
+                case .failure(let error):
+                    Logger.shared.log(message: "Failed fetch random dog image use case with error: \(error)", level: .error)
+                }
+            }, receiveCancel: {
+                Logger.shared.log(message: "Cancelled fetch random dog image use case", level: .warning)
+            })
+            .eraseToAnyPublisher()
     }
 }
+
