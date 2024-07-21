@@ -15,6 +15,8 @@
 		FE85FC172C4D4FBC00EE4CC5 /* FetchRandomDogImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC162C4D4FBC00EE4CC5 /* FetchRandomDogImageResponse.swift */; };
 		FE85FC192C4D4FDB00EE4CC5 /* DogAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC182C4D4FDB00EE4CC5 /* DogAPIService.swift */; };
 		FE85FC1E2C4D504200EE4CC5 /* DogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC1D2C4D504200EE4CC5 /* DogRepository.swift */; };
+		FE85FC222C4D531900EE4CC5 /* FetchRandomDogImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC212C4D531900EE4CC5 /* FetchRandomDogImageUseCase.swift */; };
+		FE85FC262C4D540000EE4CC5 /* DogNetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC252C4D540000EE4CC5 /* DogNetworkInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		FE85FC162C4D4FBC00EE4CC5 /* FetchRandomDogImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRandomDogImageResponse.swift; sourceTree = "<group>"; };
 		FE85FC182C4D4FDB00EE4CC5 /* DogAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPIService.swift; sourceTree = "<group>"; };
 		FE85FC1D2C4D504200EE4CC5 /* DogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepository.swift; sourceTree = "<group>"; };
+		FE85FC212C4D531900EE4CC5 /* FetchRandomDogImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRandomDogImageUseCase.swift; sourceTree = "<group>"; };
+		FE85FC252C4D540000EE4CC5 /* DogNetworkInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogNetworkInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				FE85FC102C4D4F8000EE4CC5 /* Data */,
-				FE85FC0B2C4D4E7900EE4CC5 /* Model */,
+				FE85FC1F2C4D52C400EE4CC5 /* Domain */,
+				FE85FC232C4D53A700EE4CC5 /* Presentation */,
 				FE85FBCE2C4D401000EE4CC5 /* DogNetwork.h */,
 			);
 			path = DogNetwork;
@@ -143,6 +148,39 @@
 				FE85FC1D2C4D504200EE4CC5 /* DogRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		FE85FC1F2C4D52C400EE4CC5 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FE85FC202C4D52F000EE4CC5 /* UseCase */,
+				FE85FC0B2C4D4E7900EE4CC5 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FE85FC202C4D52F000EE4CC5 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				FE85FC212C4D531900EE4CC5 /* FetchRandomDogImageUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		FE85FC232C4D53A700EE4CC5 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FE85FC242C4D53B000EE4CC5 /* Interfaces */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FE85FC242C4D53B000EE4CC5 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				FE85FC252C4D540000EE4CC5 /* DogNetworkInterface.swift */,
+			);
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +295,8 @@
 			files = (
 				FE85FC152C4D4FA800EE4CC5 /* FetchRandomDogImageRequest.swift in Sources */,
 				FE85FC0D2C4D4E8400EE4CC5 /* Dog.swift in Sources */,
+				FE85FC262C4D540000EE4CC5 /* DogNetworkInterface.swift in Sources */,
+				FE85FC222C4D531900EE4CC5 /* FetchRandomDogImageUseCase.swift in Sources */,
 				FE85FC1E2C4D504200EE4CC5 /* DogRepository.swift in Sources */,
 				FE85FC172C4D4FBC00EE4CC5 /* FetchRandomDogImageResponse.swift in Sources */,
 				FE85FC192C4D4FDB00EE4CC5 /* DogAPIService.swift in Sources */,
