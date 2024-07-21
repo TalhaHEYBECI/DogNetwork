@@ -1,0 +1,24 @@
+# macOS system files
+.DS_Store
+
+# Xcode specific files
+*.xcworkspace
+!*.xcworkspace/contents.xcworkspacedata
+!*.xcworkspace/xcuserdata
+!*.xcworkspace/xcshareddata
+*.xcuserdata
+*.xcuserstate
+*.xccheckout
+*.xcscheme
+
+# Build products
+build/
+DerivedData/
+
+# Various settings files
+*.xcsettings
+*.xcuserdatad
+
+# Personal settings
+userdata/
+
