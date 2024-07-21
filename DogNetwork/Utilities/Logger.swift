@@ -9,7 +9,8 @@ import Foundation
 
 public class Logger {
     public static let shared = Logger()
-    private var isLoggingEnabled = true
+    private var isLoggingEnabled = false
+    private var showClassFunctionDetails = false
 
     private init() {}
 
@@ -20,16 +21,37 @@ public class Logger {
         case error = "ERROR"
     }
 
+
     public func enableLogging(_ enable: Bool) {
         isLoggingEnabled = enable
     }
 
-    public func log(message: String, level: LogLevel = .info, file: String = #file, function: String = #function, line: Int = #line) {
-        guard isLoggingEnabled else { return }
-        let timestamp = getCurrentTimestamp()
-        let fileName = (file as NSString).lastPathComponent
-        print("\(timestamp) [\(level.rawValue)] \(fileName):\(line) \(function) - \(message)")
+    public func showDetails(_ show: Bool) {
+        showClassFunctionDetails = show
     }
+
+    public func logStart() {
+        let timestamp = getCurrentTimestamp()
+        print("\(timestamp) ---------------------- DOG NETWORK INTERFACE STARTED --------------------------------")
+    }
+
+    public func logEnd() {
+        let timestamp = getCurrentTimestamp()
+        print("\(timestamp) ---------------------- DOG NETWORK INTERFACE ENDED   --------------------------------")
+    }
+
+    public func log(message: String, level: LogLevel = .info, file: String = #file, function: String = #function, line: Int = #line, alwaysLog: Bool = false) {
+        if alwaysLog || isLoggingEnabled {
+            let timestamp = getCurrentTimestamp()
+            let fileName = (file as NSString).lastPathComponent
+            if showClassFunctionDetails {
+                print("\(timestamp) [\(level.rawValue)] \(fileName):\(line) \(function) - \(message)")
+            } else {
+                print("\(timestamp) [\(level.rawValue)] - \(message)")
+            }
+        }
+    }
+
 
     private func getCurrentTimestamp() -> String {
         let dateFormatter = DateFormatter()
