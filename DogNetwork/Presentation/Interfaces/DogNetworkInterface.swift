@@ -9,30 +9,43 @@ import Foundation
 import Combine
 
 public class DogNetworkInterface: ObservableObject {
+
     @Published public var dogImageURL: String = ""
     @Published public var errorMessage: String = ""
+    public var imageUpdated = PassthroughSubject<Void, Never>()
     
+
     private let fetchRandomDogImageUseCase: FetchRandomDogImageUseCaseProtocol
     private var cancellables = Set<AnyCancellable>()
     
+
     public init(fetchRandomDogImageUseCase: FetchRandomDogImageUseCaseProtocol = FetchRandomDogImageUseCase()) {
         self.fetchRandomDogImageUseCase = fetchRandomDogImageUseCase
     }
     
+
     public func fetchRandomDogImage() {
-        Logger.shared.log(message: "Fetching random dog image in Interface", level: .debug)
+        Logger.shared.logStart()
+        Logger.shared.log(message: "Fetching random dog image", alwaysLog: true)
         fetchRandomDogImageUseCase.execute()
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .finished:
-                    Logger.shared.log(message: "Finished fetching random dog image in Interface", level: .info)
+                    Logger.shared.log(message: "Finished fetching random dog image", alwaysLog: true)
                 case .failure(let error):
-                    self.errorMessage = error.localizedDescription
-                    Logger.shared.log(message: "Failed fetching random dog image in Interface with error: \(error)", level: .error)
+                    DispatchQueue.main.async {
+                        self.errorMessage = error.localizedDescription
+                    }
+                    Logger.shared.log(message: "Error fetching random dog image: \(error.localizedDescription)", level: .error, alwaysLog: true)
                 }
+                Logger.shared.logEnd()
             }, receiveValue: { dog in
-                self.dogImageURL = dog.message
-                Logger.shared.log(message: "Received dog image URL in Interface: \(dog.message)", level: .debug)
+                DispatchQueue.main.async {
+                    self.dogImageURL = dog.message
+                    self.errorMessage = ""
+                    Logger.shared.log(message: "Received dog image URL: \(dog.message)", alwaysLog: true)
+                }
+                self.imageUpdated.send()
             })
             .store(in: &cancellables)
     }
