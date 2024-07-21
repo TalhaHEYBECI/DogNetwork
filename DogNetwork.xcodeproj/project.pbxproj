@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FE85FBD42C4D401000EE4CC5 /* DogNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE85FBCB2C4D401000EE4CC5 /* DogNetwork.framework */; };
-		FE85FBD92C4D401000EE4CC5 /* DogNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FBD82C4D401000EE4CC5 /* DogNetworkTests.swift */; };
 		FE85FBDA2C4D401000EE4CC5 /* DogNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = FE85FBCE2C4D401000EE4CC5 /* DogNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE85FC0D2C4D4E8400EE4CC5 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC0C2C4D4E8400EE4CC5 /* Dog.swift */; };
 		FE85FC152C4D4FA800EE4CC5 /* FetchRandomDogImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC142C4D4FA800EE4CC5 /* FetchRandomDogImageRequest.swift */; };
@@ -18,6 +17,9 @@
 		FE85FC222C4D531900EE4CC5 /* FetchRandomDogImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC212C4D531900EE4CC5 /* FetchRandomDogImageUseCase.swift */; };
 		FE85FC262C4D540000EE4CC5 /* DogNetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC252C4D540000EE4CC5 /* DogNetworkInterface.swift */; };
 		FE85FC292C4D5C0D00EE4CC5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC282C4D5C0D00EE4CC5 /* Logger.swift */; };
+		FE85FC382C4D86B400EE4CC5 /* FetchRandomDogImageUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC372C4D86B400EE4CC5 /* FetchRandomDogImageUseCaseTests.swift */; };
+		FE85FC3A2C4D86D400EE4CC5 /* DogAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC392C4D86D400EE4CC5 /* DogAPIServiceTests.swift */; };
+		FE85FC3C2C4D872F00EE4CC5 /* DogAPIServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC3B2C4D872F00EE4CC5 /* DogAPIServiceMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +36,6 @@
 		FE85FBCB2C4D401000EE4CC5 /* DogNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DogNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE85FBCE2C4D401000EE4CC5 /* DogNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DogNetwork.h; sourceTree = "<group>"; };
 		FE85FBD32C4D401000EE4CC5 /* DogNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE85FBD82C4D401000EE4CC5 /* DogNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogNetworkTests.swift; sourceTree = "<group>"; };
 		FE85FC0C2C4D4E8400EE4CC5 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		FE85FC142C4D4FA800EE4CC5 /* FetchRandomDogImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRandomDogImageRequest.swift; sourceTree = "<group>"; };
 		FE85FC162C4D4FBC00EE4CC5 /* FetchRandomDogImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRandomDogImageResponse.swift; sourceTree = "<group>"; };
@@ -43,6 +44,9 @@
 		FE85FC212C4D531900EE4CC5 /* FetchRandomDogImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRandomDogImageUseCase.swift; sourceTree = "<group>"; };
 		FE85FC252C4D540000EE4CC5 /* DogNetworkInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogNetworkInterface.swift; sourceTree = "<group>"; };
 		FE85FC282C4D5C0D00EE4CC5 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		FE85FC372C4D86B400EE4CC5 /* FetchRandomDogImageUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRandomDogImageUseCaseTests.swift; sourceTree = "<group>"; };
+		FE85FC392C4D86D400EE4CC5 /* DogAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPIServiceTests.swift; sourceTree = "<group>"; };
+		FE85FC3B2C4D872F00EE4CC5 /* DogAPIServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPIServiceMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +101,9 @@
 		FE85FBD72C4D401000EE4CC5 /* DogNetworkTests */ = {
 			isa = PBXGroup;
 			children = (
-				FE85FBD82C4D401000EE4CC5 /* DogNetworkTests.swift */,
+				FE85FC372C4D86B400EE4CC5 /* FetchRandomDogImageUseCaseTests.swift */,
+				FE85FC392C4D86D400EE4CC5 /* DogAPIServiceTests.swift */,
+				FE85FC3B2C4D872F00EE4CC5 /* DogAPIServiceMock.swift */,
 			);
 			path = DogNetworkTests;
 			sourceTree = "<group>";
@@ -319,7 +325,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE85FBD92C4D401000EE4CC5 /* DogNetworkTests.swift in Sources */,
+				FE85FC382C4D86B400EE4CC5 /* FetchRandomDogImageUseCaseTests.swift in Sources */,
+				FE85FC3A2C4D86D400EE4CC5 /* DogAPIServiceTests.swift in Sources */,
+				FE85FC3C2C4D872F00EE4CC5 /* DogAPIServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
