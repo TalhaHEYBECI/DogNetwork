@@ -6,6 +6,20 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		FE85FC3D2C4D8DA700EE4CC5 /* DogUniversal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FE85FC402C4D8DA700EE4CC5 /* Build configuration list for PBXAggregateTarget "DogUniversal" */;
+			buildPhases = (
+				FE85FC412C4D8DCD00EE4CC5 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = DogUniversal;
+			productName = DogUniversal;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		FE85FBD42C4D401000EE4CC5 /* DogNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE85FBCB2C4D401000EE4CC5 /* DogNetwork.framework */; };
 		FE85FBDA2C4D401000EE4CC5 /* DogNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = FE85FBCE2C4D401000EE4CC5 /* DogNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -267,6 +281,9 @@
 					FE85FBD22C4D401000EE4CC5 = {
 						CreatedOnToolsVersion = 15.2;
 					};
+					FE85FC3D2C4D8DA700EE4CC5 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 				};
 			};
 			buildConfigurationList = FE85FBC52C4D401000EE4CC5 /* Build configuration list for PBXProject "DogNetwork" */;
@@ -284,6 +301,7 @@
 			targets = (
 				FE85FBCA2C4D401000EE4CC5 /* DogNetwork */,
 				FE85FBD22C4D401000EE4CC5 /* DogNetworkTests */,
+				FE85FC3D2C4D8DA700EE4CC5 /* DogUniversal */,
 			);
 		};
 /* End PBXProject section */
@@ -304,6 +322,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FE85FC412C4D8DCD00EE4CC5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Universal Script\n\nset -e\n\nFRAMEWORK_NAME=\"DogNetwork\"\nIOS_SCHEME_NAME=\"DogNetwork\"\n\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi\n\nSIMULATOR_ARCHIVE_PATH=\"${SRCROOT}/build/${FRAMEWORK_NAME}-iphonesimulator.xcarchive\"\nDEVICE_ARCHIVE_PATH_ARM64=\"${SRCROOT}/build/${FRAMEWORK_NAME}-iphoneos-arm64.xcarchive\"\n\nOUTPUT_DIR=\"../DogNetwork/Universal/\"\n\necho \"Archiving for simulator\"\n# Simulator xcarchieve\nxcodebuild archive ONLY_ACTIVE_ARCH=NO -scheme ${IOS_SCHEME_NAME} -destination=\"generic/platform=iOS Simulator\" -archivePath \"${SIMULATOR_ARCHIVE_PATH}\" -sdk iphonesimulator OTHER_CFLAGS=\"-fembed-bitcode\" SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES\n\necho \"Archiving for device Arm64\"\n# Device xcarchieve\nxcodebuild archive -scheme ${IOS_SCHEME_NAME} -destination=\"generic/platform=iOS\" -archivePath \"${DEVICE_ARCHIVE_PATH_ARM64}\" -sdk iphoneos OTHER_CFLAGS=\"-fembed-bitcode\" SKIP_INSTALL=NO BUILD_LIBRARIES_FOR_DISTRIBUTION=YES\n\n# Clean up old output directory\nrm -rf \"${OUTPUT_DIR}\"\n\necho \"Creating DogNetwork.xcframework\"\n# Create xcframework combine of all frameworks\nxcodebuild -create-xcframework \\\n  -framework ${SIMULATOR_ARCHIVE_PATH}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework \\\n  -framework ${DEVICE_ARCHIVE_PATH_ARM64}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework \\\n  -output ${OUTPUT_DIR}/${FRAMEWORK_NAME}.xcframework\n\necho \"End\"\n# Delete the most recent build.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE85FBC72C4D401000EE4CC5 /* Sources */ = {
@@ -347,6 +385,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -413,6 +452,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -493,7 +533,7 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtb.DogNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -527,7 +567,7 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtb.DogNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -568,6 +608,30 @@
 			};
 			name = Release;
 		};
+		FE85FC3E2C4D8DA700EE4CC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X7FC48GFKJ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+			};
+			name = Debug;
+		};
+		FE85FC3F2C4D8DA700EE4CC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X7FC48GFKJ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -594,6 +658,15 @@
 			buildConfigurations = (
 				FE85FBE12C4D401000EE4CC5 /* Debug */,
 				FE85FBE22C4D401000EE4CC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE85FC402C4D8DA700EE4CC5 /* Build configuration list for PBXAggregateTarget "DogUniversal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE85FC3E2C4D8DA700EE4CC5 /* Debug */,
+				FE85FC3F2C4D8DA700EE4CC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

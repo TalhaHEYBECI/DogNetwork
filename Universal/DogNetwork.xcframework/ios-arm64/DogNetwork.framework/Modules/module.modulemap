@@ -1,0 +1,11 @@
+framework module DogNetwork {
+  umbrella header "DogNetwork.h"
+  export *
+
+  module * { export * }
+}
+
+module DogNetwork.Swift {
+  header "DogNetwork-Swift.h"
+  requires objc
+}
