@@ -10,6 +10,11 @@
 		FE85FBD42C4D401000EE4CC5 /* DogNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE85FBCB2C4D401000EE4CC5 /* DogNetwork.framework */; };
 		FE85FBD92C4D401000EE4CC5 /* DogNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FBD82C4D401000EE4CC5 /* DogNetworkTests.swift */; };
 		FE85FBDA2C4D401000EE4CC5 /* DogNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = FE85FBCE2C4D401000EE4CC5 /* DogNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE85FC0D2C4D4E8400EE4CC5 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC0C2C4D4E8400EE4CC5 /* Dog.swift */; };
+		FE85FC152C4D4FA800EE4CC5 /* FetchRandomDogImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC142C4D4FA800EE4CC5 /* FetchRandomDogImageRequest.swift */; };
+		FE85FC172C4D4FBC00EE4CC5 /* FetchRandomDogImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC162C4D4FBC00EE4CC5 /* FetchRandomDogImageResponse.swift */; };
+		FE85FC192C4D4FDB00EE4CC5 /* DogAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC182C4D4FDB00EE4CC5 /* DogAPIService.swift */; };
+		FE85FC1E2C4D504200EE4CC5 /* DogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85FC1D2C4D504200EE4CC5 /* DogRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,11 @@
 		FE85FBCE2C4D401000EE4CC5 /* DogNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DogNetwork.h; sourceTree = "<group>"; };
 		FE85FBD32C4D401000EE4CC5 /* DogNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE85FBD82C4D401000EE4CC5 /* DogNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogNetworkTests.swift; sourceTree = "<group>"; };
+		FE85FC0C2C4D4E8400EE4CC5 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		FE85FC142C4D4FA800EE4CC5 /* FetchRandomDogImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRandomDogImageRequest.swift; sourceTree = "<group>"; };
+		FE85FC162C4D4FBC00EE4CC5 /* FetchRandomDogImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRandomDogImageResponse.swift; sourceTree = "<group>"; };
+		FE85FC182C4D4FDB00EE4CC5 /* DogAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPIService.swift; sourceTree = "<group>"; };
+		FE85FC1D2C4D504200EE4CC5 /* DogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +79,8 @@
 		FE85FBCD2C4D401000EE4CC5 /* DogNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				FE85FC102C4D4F8000EE4CC5 /* Data */,
+				FE85FC0B2C4D4E7900EE4CC5 /* Model */,
 				FE85FBCE2C4D401000EE4CC5 /* DogNetwork.h */,
 			);
 			path = DogNetwork;
@@ -80,6 +92,57 @@
 				FE85FBD82C4D401000EE4CC5 /* DogNetworkTests.swift */,
 			);
 			path = DogNetworkTests;
+			sourceTree = "<group>";
+		};
+		FE85FC0B2C4D4E7900EE4CC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE85FC0C2C4D4E8400EE4CC5 /* Dog.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE85FC102C4D4F8000EE4CC5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FE85FC112C4D4F8600EE4CC5 /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FE85FC112C4D4F8600EE4CC5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FE85FC1C2C4D503500EE4CC5 /* Repository */,
+				FE85FC132C4D4F8F00EE4CC5 /* Response */,
+				FE85FC122C4D4F8A00EE4CC5 /* Request */,
+				FE85FC182C4D4FDB00EE4CC5 /* DogAPIService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FE85FC122C4D4F8A00EE4CC5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				FE85FC142C4D4FA800EE4CC5 /* FetchRandomDogImageRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		FE85FC132C4D4F8F00EE4CC5 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				FE85FC162C4D4FBC00EE4CC5 /* FetchRandomDogImageResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		FE85FC1C2C4D503500EE4CC5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				FE85FC1D2C4D504200EE4CC5 /* DogRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +207,7 @@
 				TargetAttributes = {
 					FE85FBCA2C4D401000EE4CC5 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 					FE85FBD22C4D401000EE4CC5 = {
 						CreatedOnToolsVersion = 15.2;
@@ -191,6 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE85FC152C4D4FA800EE4CC5 /* FetchRandomDogImageRequest.swift in Sources */,
+				FE85FC0D2C4D4E8400EE4CC5 /* Dog.swift in Sources */,
+				FE85FC1E2C4D504200EE4CC5 /* DogRepository.swift in Sources */,
+				FE85FC172C4D4FBC00EE4CC5 /* FetchRandomDogImageResponse.swift in Sources */,
+				FE85FC192C4D4FDB00EE4CC5 /* DogAPIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +410,7 @@
 		FE85FBDE2C4D401000EE4CC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -365,6 +435,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,6 +444,7 @@
 		FE85FBDF2C4D401000EE4CC5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -405,6 +477,7 @@
 		FE85FBE12C4D401000EE4CC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X7FC48GFKJ;
@@ -421,6 +494,7 @@
 		FE85FBE22C4D401000EE4CC5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X7FC48GFKJ;
