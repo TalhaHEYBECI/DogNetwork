@@ -12,9 +12,10 @@ import _SwiftConcurrencyShims
 public struct FetchRandomDogImageRequest {
   public init()
 }
-public struct Dog : Swift.Decodable {
+public struct Dog : Swift.Codable {
   public let message: Swift.String
   public let status: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public class DogNetworkInterface : Foundation.ObservableObject {
@@ -42,6 +43,7 @@ public class DogNetworkInterface : Foundation.ObservableObject {
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
+  public var imageUpdated: Combine.PassthroughSubject<Swift.Void, Swift.Never>
   public init(fetchRandomDogImageUseCase: any DogNetwork.FetchRandomDogImageUseCaseProtocol = FetchRandomDogImageUseCase())
   public func fetchRandomDogImage()
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
@@ -63,9 +65,10 @@ public class DogRepository : DogNetwork.DogRepositoryProtocol {
   public func fetchRandomDogImage() -> Combine.AnyPublisher<DogNetwork.Dog, any Swift.Error>
   @objc deinit
 }
-public struct FetchRandomDogImageResponse : Swift.Decodable {
+public struct FetchRandomDogImageResponse : Swift.Codable {
   public let message: Swift.String
   public let status: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public protocol DogAPIServiceProtocol {
@@ -90,7 +93,10 @@ public class DogAPIService : DogNetwork.DogAPIServiceProtocol {
     }
   }
   public func enableLogging(_ enable: Swift.Bool)
-  public func log(message: Swift.String, level: DogNetwork.Logger.LogLevel = .info, file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line)
+  public func showDetails(_ show: Swift.Bool)
+  public func logStart()
+  public func logEnd()
+  public func log(message: Swift.String, level: DogNetwork.Logger.LogLevel = .info, file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line, alwaysLog: Swift.Bool = false)
   @objc deinit
 }
 extension DogNetwork.Logger.LogLevel : Swift.Equatable {}
