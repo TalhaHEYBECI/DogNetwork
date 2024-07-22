@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		dDamiwTiWSg2BvI95cFL8sTtfsg=
+		hygYGVii9ZJgS1FoAaZxB5wtJOQ=
 		</data>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		o1z6fYV1lT7iLPWNCxkxBT4dqiI=
+		T81YnTOEsLHUkMFKEWC7N4SQ3Us=
 		</data>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		o1z6fYV1lT7iLPWNCxkxBT4dqiI=
+		T81YnTOEsLHUkMFKEWC7N4SQ3Us=
 		</data>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		BP59HZ+qZUJBJIm3k1kQMlzW4KM=
+		kJiSZwjW2eeXCshfUlw8Bl8N/kw=
 		</data>
 		<key>Modules/DogNetwork.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		dDamiwTiWSg2BvI95cFL8sTtfsg=
+		hygYGVii9ZJgS1FoAaZxB5wtJOQ=
 		</data>
 		<key>Modules/DogNetwork.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Dw5D1mBcPN9+Y14j1gPuPdhxBAo=
+		SjxMe7D1/uxkgFTHMTApZrYx0so=
 		</data>
 		<key>Modules/DogNetwork.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/DogNetwork.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Dw5D1mBcPN9+Y14j1gPuPdhxBAo=
+		SjxMe7D1/uxkgFTHMTApZrYx0so=
 		</data>
 		<key>Modules/DogNetwork.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		kthYmki8RgZ/ctOFivjVbqjE4KM=
+		wB2+FCk7JAQ/9kYuwIbggS6qm+4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,14 +81,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WhY4JcJ5JBC/Z+Eg1u7zz4BCeeC3/mGuKHqutYb7dQs=
+			TBdw9nG4c/7M5PYR6coI3bzUVmCmdabzcKTABFZETY8=
 			</data>
 		</dict>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5gTeuSHV0fTCUiD9KCR8hhVMEJTYbGZLiN8WuvRMKvY=
+			nR6UJE1JNONWRlD7sGubn1ZGPa89O1ZdZkTpxAnkSww=
 			</data>
 		</dict>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -102,28 +102,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5gTeuSHV0fTCUiD9KCR8hhVMEJTYbGZLiN8WuvRMKvY=
+			nR6UJE1JNONWRlD7sGubn1ZGPa89O1ZdZkTpxAnkSww=
 			</data>
 		</dict>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			llFE7XERMyo0g24XCgJWPVps7RaUV36yqYmFqDY5DGs=
+			sfSoPtZDGaH06LY0S9MkuqBwjEP2kYh1gn31zrKOulo=
 			</data>
 		</dict>
 		<key>Modules/DogNetwork.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WhY4JcJ5JBC/Z+Eg1u7zz4BCeeC3/mGuKHqutYb7dQs=
+			TBdw9nG4c/7M5PYR6coI3bzUVmCmdabzcKTABFZETY8=
 			</data>
 		</dict>
 		<key>Modules/DogNetwork.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xyfwPLRcE0mhVyROBcRHBWkfrG7I5O6FssxrzIYHfDg=
+			FhHlfDefB0/z9HJ5eXWg/24s9W4VuSA04mCETkF7FG8=
 			</data>
 		</dict>
 		<key>Modules/DogNetwork.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -137,14 +137,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xyfwPLRcE0mhVyROBcRHBWkfrG7I5O6FssxrzIYHfDg=
+			FhHlfDefB0/z9HJ5eXWg/24s9W4VuSA04mCETkF7FG8=
 			</data>
 		</dict>
 		<key>Modules/DogNetwork.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			b/VcV3YsLEqZAPyJblTK4iUf5baoYE+glyJrLL4dvZs=
+			obS9PG60N9SWJPfTeb1aIXSyAq54eYLEWFq4MJ0e3T8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

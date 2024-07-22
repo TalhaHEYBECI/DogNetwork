@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct FetchRandomDogImageResponse: Decodable {
+public struct FetchRandomDogImageResponse: Codable {
     public let message: String
     public let status: String
 }

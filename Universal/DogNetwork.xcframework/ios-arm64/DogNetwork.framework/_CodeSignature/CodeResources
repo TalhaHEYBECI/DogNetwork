@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		dDamiwTiWSg2BvI95cFL8sTtfsg=
+		hygYGVii9ZJgS1FoAaZxB5wtJOQ=
 		</data>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Zyk4B1renNiOV4cMDuZV6T3qsOE=
+		vHmnzVUAQy1yHTfRKV1clWIGbqw=
 		</data>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Zyk4B1renNiOV4cMDuZV6T3qsOE=
+		vHmnzVUAQy1yHTfRKV1clWIGbqw=
 		</data>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		0lHN1SMGg1HrJE2fna5tHWdd9X8=
+		8GvMm+Q7iGyHVW01kf0kwDFzvCo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -61,14 +61,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WhY4JcJ5JBC/Z+Eg1u7zz4BCeeC3/mGuKHqutYb7dQs=
+			TBdw9nG4c/7M5PYR6coI3bzUVmCmdabzcKTABFZETY8=
 			</data>
 		</dict>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tIuDKW42iOahqlq1Libdg6XRVP00XfmOle//uL1A+T8=
+			TV5lwehd4Z381ZnnD7XRfJC9TMKczmNf/NfdoeekFOI=
 			</data>
 		</dict>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tIuDKW42iOahqlq1Libdg6XRVP00XfmOle//uL1A+T8=
+			TV5lwehd4Z381ZnnD7XRfJC9TMKczmNf/NfdoeekFOI=
 			</data>
 		</dict>
 		<key>Modules/DogNetwork.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ugiUSxNIqccBrG6Gjr1jzD3/pSBRLVCT/5a4twGZWkU=
+			eqRYbxY3Vg5wz3vBzsCzrJFLA6N872gkDqtVK+o96hI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
